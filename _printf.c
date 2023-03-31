@@ -8,17 +8,14 @@
 int _printf(const char *format, ...)
 {
 	int i = 0;
-	/*char *x;*/
 	int va;
 	int p = 0;
 	va_list list;
 	int (*z)(va_list);
 
 	va_start(list, format);
-
 	if (format == NULL)
 		return (-1);
-
 	while (format[i] != '\0')
 	{
 		if (format[i] != '%')
@@ -44,11 +41,9 @@ int _printf(const char *format, ...)
 				p += va;
 				i += 2;
 				continue;
-			}
-			else
+			} else
 				break;
 		}
-	}
-	va_end(list);
+	} va_end(list);
 	return (p);
 }
