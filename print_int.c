@@ -12,16 +12,24 @@ int print_int(va_list args)
 	int n, num, ld;
 	int dig;
 	int exp, con;
-/*	int val = 1;*/
+	int val = 1;
 
 	n = va_arg(args, int);
-
+	if (n < 0)
+		val = -1;
 	ld = n % 10;
 	con = 1;
 	exp = 1;
 	n = n / 10;
 	num = n;
-
+	if (val < 0)
+	{
+		_putchar('-');
+		num = -num;
+		n = -n;
+		ld = -ld;
+		con++;
+	}
 	if (num > 0)
 	{
 		while (num / 10 != 0)

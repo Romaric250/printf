@@ -15,6 +15,9 @@ int print_str(va_list args)
 	int i;
 	char *ptr = va_arg(args, char *);
 
+	if (ptr == NULL)
+		ptr = "(null)";
+
 	if (ptr)
 	{
 		p = strlen(ptr);
