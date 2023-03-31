@@ -12,7 +12,7 @@ int print_int(va_list args)
 	int n, num, ld;
 	int dig;
 	int exp, con;
-	int val = 1;
+/*	int val = 1;*/
 
 	n = va_arg(args, int);
 

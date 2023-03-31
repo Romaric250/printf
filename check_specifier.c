@@ -9,10 +9,9 @@
 
 int (*check_specifier(const char *format))(va_list)
 {
-	func_t spec_array[6] = {
+	func_t spec_array[5] = {
 		{"c", print_char},
 		{"s", print_str},
-		{"%", print_pc},
 		{"d", print_int},
 		{"i", print_int},
 		{NULL, NULL}

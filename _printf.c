@@ -8,7 +8,7 @@
 int _printf(const char *format, ...)
 {
 	int i = 0;
-	char *x;
+	/*char *x;*/
 	int va;
 	int p = 0;
 	va_list list;
@@ -30,6 +30,13 @@ int _printf(const char *format, ...)
 		}
 		if (format[i] == '%')
 		{
+			if (format[i + 1] == '%')
+			{
+				va = write(1, "%%", 1);
+				p += va;
+				i += 2;
+				continue;
+			}
 			z = check_specifier(&format[i + 1]);
 			if (z != NULL)
 			{
