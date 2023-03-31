@@ -21,7 +21,7 @@ int print_int(va_list args)
 	exp = 1;
 	n = n / 10;
 	num = n;
-	
+
 	if (num > 0)
 	{
 		while (num / 10 != 0)

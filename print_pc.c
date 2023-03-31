@@ -10,10 +10,9 @@
 int print_pc(va_list args)
 {
 	int a = 0;
-	a++;
 
 	write(1, "%%", 1);
 
-	return(a);
+	return (++a);
 
 }

@@ -26,8 +26,8 @@ int print_str(va_list args)
 
 		}
 
-		return(a);
+		return (a);
 	}
 
-	return(0);
+	return (0);
 }
