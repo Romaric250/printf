@@ -28,9 +28,7 @@ int print_str(va_list args)
 			write(1, &ptr[i], 1);
 
 		}
-
-		return (a);
 	}
 
-	return (0);
+	return (a);
 }

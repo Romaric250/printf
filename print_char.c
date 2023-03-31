@@ -19,5 +19,5 @@ int print_char(va_list args)
 		write(1, &a, 1);
 		return (count);
 	}
-	return (0);
+	return (1);
 }
